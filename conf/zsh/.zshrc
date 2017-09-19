@@ -1,4 +1,4 @@
-#Point to your oh-my-zsh installation.
+# Point to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -57,15 +57,13 @@ alias play="activator"
 alias vim="nvim"
 alias plz="brew upgrade; brew cleanup"
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval $(thefuck --alias)
+eval "$(thefuck --alias)"
 
-eval $(fasd --init auto)
+eval "$(fasd --init auto)"
 
 # fzf {{{
 # colors

@@ -30,7 +30,6 @@ apps=(
   wget                                          # utils
   wifi-password                                 # utils - show the wifi-password in terminal
   zsh                                           # shell
-  zsh-syntax-highlighting			# highlighter
 )
 
 fun=(
