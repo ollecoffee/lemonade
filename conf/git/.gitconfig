@@ -1,0 +1,17 @@
+[user]
+        name = Olle Gynther - Zillén
+[core]
+        autocrlf = input
+[color]
+        ui = auto
+[color "status"]
+        added = green
+        changed = blue bold
+        untracked = red
+[color "branch"]
+        remote = yellow
+[credential]
+        helper = store --file ~/.git-credentials
+        helper = cache --timeout 86400
+
+
