@@ -1,6 +1,6 @@
 " auto install plug if not found
 if empty(glob('$HOME/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo "$HOME/.config//nvim/autoload/plug.vim" --create-dirs
+  silent !curl -fLo "$HOME/.config/nvim/autoload/plug.vim" --create-dirs
   \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
   augroup PLUG
@@ -46,5 +46,9 @@ Plug 'elzr/vim-json',                          { 'for': 'json' }
 " xml
 Plug 'othree/xml.vim',                         { 'for': 'xml' }
 
+" java
+Plug 'artur-shaik/vim-javacomplete2',           { 'for': 'java' }
+
 call plug#end()
+
 
