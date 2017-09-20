@@ -35,9 +35,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" copy lul
-set clipboard=unnamed
-
 " Open NERDTree
 nnoremap <Leader>n :NERDTreeToggle<CR>
 
