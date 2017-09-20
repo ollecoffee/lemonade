@@ -29,6 +29,7 @@ Plug 'junegunn/gv.vim'
 
 " general
 Plug 'junegunn/vim-slash'
+Plug 'itchyny/lightline.vim'
 
 " js
 Plug 'pangloss/vim-javascript',                { 'for': 'javascript.jsx' }
@@ -47,7 +48,12 @@ Plug 'elzr/vim-json',                          { 'for': 'json' }
 Plug 'othree/xml.vim',                         { 'for': 'xml' }
 
 " java
-Plug 'artur-shaik/vim-javacomplete2',           { 'for': 'java' }
+Plug 'artur-shaik/vim-javacomplete2',          { 'for': 'java' }
+
+" php
+Plug 'ludovicchabant/vim-gutentags',           { 'for': 'php' }
+Plug 'lvht/phpcd.vim',                         { 'for': 'php', 'do': 'composer install' }
+Plug 'arnaud-lb/vim-php-namespace',            { 'for': 'php' }
 
 call plug#end()
 
