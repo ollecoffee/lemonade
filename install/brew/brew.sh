@@ -18,7 +18,6 @@ brew upgrade
 # packages to install
 apps=(
   coreutils                                     # utils
-  curl                                          # utils
   fasd                                          # utils - navigate directories fast, like autojump, z
   fzf                                           # utils - terminal fuzzy finder
   git                                           # utils
@@ -28,7 +27,6 @@ apps=(
   shellcheck                                    # shell linter
   thefuck 					# spell correction
   wget                                          # utils
-  wifi-password                                 # utils - show the wifi-password in terminal
   zsh                                           # shell
 )
 
@@ -40,8 +38,6 @@ fun=(
 )
 
 brew tap homebrew/services
-
-brew tap universal-ctags/universal-ctags
 
 # make sure we’re using the latest Homebrew
 brew update
@@ -56,8 +52,6 @@ brew cleanup
 
 # install cask
 brew tap caskroom/cask
-brew install brew-cask
-brew tap caskroom/versions
 
 # packages to install
 apps=(
