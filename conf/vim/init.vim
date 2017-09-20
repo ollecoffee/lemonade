@@ -1,45 +1,22 @@
-" auto install plug if not found
-if empty(glob('$HOME/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo "$HOME/.config//nvim/autoload/plug.vim" --create-dirs
-  \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" i liek my coffee scripted
 
-  augroup PLUG
-    autocmd!
-    autocmd VimEnter * PlugInstall
-  augroup END
-endif
+scriptencoding utf-8
+set encoding=utf-8
 
+" path where configs are stored
+let s:NEOVIM_CONFIG = '$HOME/lemonade/conf/vim/'
 
-call plug#begin()
+" configs split up according to functionality
+let s:configs = [
+\ 'mappings',
+\ 'mappings.plugins',
+\ 'plugins',
+\ 'settings',
+\ 'settings.plugins',
+\ ]
 
-Plug 'scrooloose/nerdtree'
-Plug 'xuyuanp/nerdtree-git-plugin'
-Plug 'ervandew/supertab'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-call plug#end()
-
-" leader - space masterrace
-let g:mapleader = "\<Space>"
-
-" don't use arrows!
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
-
-" NERDTree nav
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-
-" Open NERDTree
-nnoremap <Leader>n :NERDTreeToggle<CR>
-
-" Open NERDTree when opening a directory or just starting Neovim
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
+" load all configs
+for s:config in s:configs
+  let s:configPath = s:NEOVIM_CONFIG . s:config . '.vim'
+  execute 'source ' . fnameescape(s:configPath)
+endfor
