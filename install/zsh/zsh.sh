@@ -12,7 +12,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 # https://github.com/zsh-users/zsh-syntax-highlighting.git
 mkdir -p "$HOME/.oh-my-zsh/custom/plugins/"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
-
+git clone https://github.com/wbinglee/zsh-wakatime.git "$HOME/.oh-my-zsh/custom/plugins/zsh-wakatime"
 
 # set default shell to zsh
 chsh -s "$(which zsh)"
