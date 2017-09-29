@@ -55,7 +55,7 @@ source $ZSH/oh-my-zsh.sh
 alias pls="brew"
 alias play="activator"
 alias vim="nvim"
-alias plz="brew upgrade; brew cleanup"
+alias plz="brew upgrade; brew cleanup; upgrade_oh_my_zsh"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
