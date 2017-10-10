@@ -13,6 +13,17 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" use hjkl-movement between rows when soft wrapping.
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
+" easily move to start/end of line
+nnoremap H 0
+vnoremap H 0
+vnoremap L $
+
 " NERDTree nav
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
