@@ -55,7 +55,7 @@ source $ZSH/oh-my-zsh.sh
 alias pls="brew"
 alias play="activator"
 alias vim="nvim"
-alias plz="brew upgrade; brew cleanup; upgrade_oh_my_zsh"
+alias plz="brew upgrade; brew cleanup; upgrade_oh_my_zsh; cd ~/alacritty; git pull; rustup update stable; cargo build --release; make app; cp -r target/release/osx/Alacritty.app /Applications/Alacritty.app; cd ~"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
