@@ -1,7 +1,9 @@
 [user]
-        name = Olle Gynther - Zillén
+	name = Olle Gynther Zillén
+	email = olle.gyntherzillen@tre.se
 [core]
         autocrlf = input
+	excludesfile = /Users/zillen001/.gitignore_global
 [color]
         ui = auto
 [color "status"]
@@ -15,3 +17,11 @@
         helper = cache --timeout 86400
 
 
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/zillen001/.stCommitMsg
