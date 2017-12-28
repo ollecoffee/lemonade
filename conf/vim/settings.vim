@@ -1,4 +1,5 @@
 set encoding=utf-8
+filetype plugin indent on
 scriptencoding utf-8
 
 " General settings
@@ -25,11 +26,16 @@ set expandtab      " tab is now space
 set tabstop=2      " 2 space characters
 set shiftwidth=2   " set to ^
 set softtabstop=2  " same same but also a lil different
+set autoindent     " auto indent for any filetype<Paste>
 
 " Google
 set ignorecase     " ignore case
 set smartcase      " find smarter
 set showmatch      " show match insta
 
+" Others
 set laststatus=2   " display status always
 set noshowmode     " hide ugly under the carpet
+set wildmenu       " command line completion - use tab
+set backspace=indent,eol,start " backspace fix
+set hidden         " more buffers
