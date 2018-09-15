@@ -21,6 +21,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(osx zsh-syntax-highlighting zsh-wakatime)
+fortune | cowsay -f $(ls /usr/local/Cellar/cowsay/3.04/share/cows/ | gshuf -n1) | lolcat 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,3 +80,11 @@ export FZF_DEFAULT_OPTS='
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+#java
+alias java9="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home"
+alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home"
+alias java10="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home"
