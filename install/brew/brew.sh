@@ -55,6 +55,7 @@ brew tap caskroom/cask
 
 # packages to install
 apps=(
+  alacritty                                     # superb terminal
   discord                                       # communication
   postman                                       # dev
   skype                                         # communication
