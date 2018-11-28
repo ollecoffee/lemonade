@@ -21,7 +21,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(osx zsh-syntax-highlighting zsh-wakatime)
-fortune | cowsay -f $(ls /usr/local/Cellar/cowsay/3.04/share/cows/ | gshuf -n1) | lolcat 
+fortune | cowsay -f $(ls $HOME/lemonade/install/cowsay/cows/ | gshuf -n1) | lolcat 
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,7 +54,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pls="brew"
-alias play="activator"
 alias vim="nvim"
 alias plz="brew upgrade; brew cleanup; upgrade_oh_my_zsh;"
 alias starwars="telnet towel.blinkenlights.nl"

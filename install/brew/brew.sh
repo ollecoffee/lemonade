@@ -18,16 +18,39 @@ brew upgrade
 # packages to install
 apps=(
   coreutils                                     # utils
+  cowsay                                        # funnier term
+  curl                                          # utils
+  diff-so-fancy                                 # git diff
   fasd                                          # utils - navigate directories fast, like autojump, z
+  fortune                                       # funnier term
   fzf                                           # utils - terminal fuzzy finder
   git                                           # utils
-  neovim                                        # editor
+  git-flow                                      # git branching
+  lolcat                                        # funnier term
+  pyenv                                         # used for neovim
+  pyenv-virtualenv                              # used for neovim
+  neovim/neovim/neovim                          # editor
   ranger                                        # terminal - file manager
   ripgrep                                       # utils - search fast
   shellcheck                                    # shell linter
-  thefuck 					# spell correction
+  telnet                                        # communication tool to see ports opened
+  tmux                                          # yet to learn
+  thefuck 				                            	# spell correction
   wget                                          # utils
   zsh                                           # shell
+)
+
+java=(
+  ant                                           # buildtool
+  docker                                        # container
+  gradle                                        # buildtool
+  jenv                                          # java version
+  kotlin                                        # cooler java
+  maven                                         # buildtool
+  sbt                                           # scala buildtool
+  scala                                         # cooler java
+  vagrant                                       # container somewhat .........
+  virtualbox                                    # container somewhat .........
 )
 
 fun=(
@@ -37,7 +60,7 @@ fun=(
   neofetch                                      # utils - print system information
 )
 
-brew tap homebrew/services
+brew tap homebrew/versions
 
 # make sure we’re using the latest Homebrew
 brew update
@@ -47,27 +70,3 @@ brew install "${apps[@]}"
 
 # remove outdated versions from the cellar
 brew cleanup
-
-# Installs brew cask which is used to install applications
-
-# install cask
-brew tap caskroom/cask
-
-# packages to install
-apps=(
-  alacritty                                     # superb terminal
-  discord                                       # communication
-  postman                                       # dev
-  skype                                         # communication
-  slack                                         # communication
-  spotify                                       # utils
-  tidal                                         # utils
-  vlc                                           # utils
-)
-
-# install packages
-brew cask install "${apps[@]}"
-
-# quick look plugins
-# see: https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
