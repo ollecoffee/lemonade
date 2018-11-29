@@ -42,6 +42,7 @@ apps=(
 
 java=(
   ant                                           # buildtool
+  ansible                                       # automation
   docker                                        # container
   gradle                                        # buildtool
   jenv                                          # java version
