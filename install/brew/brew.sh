@@ -61,8 +61,6 @@ fun=(
   neofetch                                      # utils - print system information
 )
 
-brew tap homebrew/versions
-
 # make sure we’re using the latest Homebrew
 brew update
 

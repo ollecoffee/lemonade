@@ -10,12 +10,13 @@ java=(
 )
 
 apps=(
+  aerial                                        # screensaver
   alfred                                        # utils
   alacritty                                     # superb terminal
   bartender                                     # bar upgrades
   discord                                       # communication
   firefox                                       # firefox
-  firefoxnightly                                # firefox on the edge
+  firefox-nightly                               # firefox on the edge
   google-chrome                                 # chrome
   google-chrome-canary                          # chrome on the edge
   insomnia                                      # dev (better postman)
