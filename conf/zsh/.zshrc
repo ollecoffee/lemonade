@@ -84,7 +84,5 @@ export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 
 #java
-alias java9="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home"
 alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home"
-alias java10="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home"
 alias java11="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home"

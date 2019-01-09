@@ -16,17 +16,14 @@ apps=(
   bartender                                     # bar upgrades
   discord                                       # communication
   firefox                                       # firefox
-  firefox-nightly                               # firefox on the edge
   google-chrome                                 # chrome
-  google-chrome-canary                          # chrome on the edge
   insomnia                                      # dev (better postman)
   istat-menus                                   # bar upgradez
-  iterm2-nightly                                # standard terminal
+  iterm2                                        # standard terminal
   opera                                         # browser
   postman                                       # dev
   signal                                        # communication
   skype                                         # communication
-  slack                                         # communication
   spotify                                       # utils
   twitch                                        # utils
   tidal                                         # utils
@@ -35,7 +32,8 @@ apps=(
 
 # install packages
 brew cask install "${apps[@]}"
+brew cask install "${java[@]}"
 
 # quick look plugins
 # see: https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package

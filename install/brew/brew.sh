@@ -40,7 +40,7 @@ apps=(
   zsh                                           # shell
 )
 
-java=(
+fun=(
   ant                                           # buildtool
   ansible                                       # automation
   docker                                        # container
@@ -50,11 +50,9 @@ java=(
   maven                                         # buildtool
   sbt                                           # scala buildtool
   scala                                         # cooler java
-  vagrant                                       # container somewhat .........
-  virtualbox                                    # container somewhat .........
 )
 
-fun=(
+java=(
   ffmpeg                                        # utils - make videos
   gifsicle                                      # utils - make gifs
   htop                                          # utils - monitor processes
@@ -66,6 +64,8 @@ brew update
 
 # install packages
 brew install "${apps[@]}"
+brew install "${fun[@]}"
+brew install "${java[@]}"
 
 # remove outdated versions from the cellar
 brew cleanup
