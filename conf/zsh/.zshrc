@@ -55,7 +55,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pls="brew"
 alias vim="nvim"
-alias plz="brew upgrade; brew cleanup; upgrade_oh_my_zsh;"
+alias plz="brew upgrade; brew cask upgrade; brew cleanup; upgrade_oh_my_zsh;"
 alias starwars="telnet towel.blinkenlights.nl"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -86,3 +86,5 @@ export NVM_DIR="$HOME/.nvm"
 #java
 alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home"
 alias java11="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
