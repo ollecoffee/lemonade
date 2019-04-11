@@ -17,13 +17,16 @@ apps=(
   discord                                       # communication
   firefox                                       # firefox
   google-chrome                                 # chrome
+  iglance                                       # menu bar coolness
   insomnia                                      # dev (better postman)
   istat-menus                                   # bar upgradez
   iterm2                                        # standard terminal
   opera                                         # browser
+  overkill                                      # don't open shiiiii
   postman                                       # dev
   signal                                        # communication
   skype                                         # communication
+  sloth                                         # see trafic
   spotify                                       # utils
   twitch                                        # utils
   tidal                                         # utils

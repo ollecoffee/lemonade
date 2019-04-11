@@ -1,5 +1,6 @@
 [user]
-	name = Olle Gynther Zillén
+	name = Olle Gynther Zillén
+	email = olle.gyntherzillen@avanza.se
 [core]
   autocrlf = input
 [color]
