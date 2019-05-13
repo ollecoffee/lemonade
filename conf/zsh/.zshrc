@@ -20,7 +20,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx zsh-syntax-highlighting zsh-wakatime)
+plugins=(osx battery zsh-syntax-highlighting zsh-wakatime)
 fortune | cowsay -f $(ls $HOME/lemonade/install/cowsay/cows/ | gshuf -n1) | lolcat 
 
 source $ZSH/oh-my-zsh.sh
