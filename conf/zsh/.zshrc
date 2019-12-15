@@ -1,5 +1,6 @@
 # Point to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -20,7 +21,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx battery zsh-syntax-highlighting zsh-wakatime)
+plugins=(osx)
 fortune | cowsay -f $(ls $HOME/lemonade/install/cowsay/cows/ | gshuf -n1) | lolcat 
 
 source $ZSH/oh-my-zsh.sh
