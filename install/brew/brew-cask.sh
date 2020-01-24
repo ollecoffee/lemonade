@@ -21,6 +21,7 @@ apps=(
   insomnia                                      # dev (better postman)
   istat-menus                                   # bar upgradez
   iterm2                                        # standard terminal
+  latest                                        # always use bleeding edge
   opera                                         # browser
   overkill                                      # don't open shiiiii
   postman                                       # dev
@@ -36,7 +37,3 @@ apps=(
 # install packages
 brew cask install "${apps[@]}"
 brew cask install "${java[@]}"
-
-# quick look plugins
-# see: https://github.com/sindresorhus/quick-look-plugins
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv webpquicklook suspicious-package
