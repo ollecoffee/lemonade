@@ -52,7 +52,7 @@ fun=(
   scala                                         # cooler java
 )
 
-java=(
+utils=(
   ffmpeg                                        # utils - make videos
   gifsicle                                      # utils - make gifs
   htop                                          # utils - monitor processes
@@ -65,7 +65,7 @@ brew update
 # install packages
 brew install "${apps[@]}"
 brew install "${fun[@]}"
-brew install "${java[@]}"
+brew install "${utils[@]}"
 
 # remove outdated versions from the cellar
 brew cleanup
