@@ -56,6 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pls="brew"
 alias vim="nvim"
+alias plx="brew cask"
 alias plz="brew upgrade; brew cask upgrade; upgrade_oh_my_zsh;"
 alias starwars="telnet towel.blinkenlights.nl"
 
