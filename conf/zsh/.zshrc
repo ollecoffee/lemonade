@@ -56,8 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pls="brew"
 alias vim="nvim"
-alias plx="brew cask"
-alias plz="brew upgrade; brew cask upgrade; omz update;"
+alias plz="brew upgrade; brew upgrade --cask; omz update;"
 alias starwars="telnet towel.blinkenlights.nl"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
