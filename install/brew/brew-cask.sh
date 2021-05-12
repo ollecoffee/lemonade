@@ -17,7 +17,7 @@ apps=(
   discord                                       # communication
   firefox                                       # firefox
   google-chrome                                 # chrome
-  iglance                                       # menu bar coolness
+  stats                                         # menu bar coolness
   insomnia                                      # dev (better postman)
   istat-menus                                   # bar upgradez
   iterm2                                        # standard terminal
