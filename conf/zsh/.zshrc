@@ -21,7 +21,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx)
+plugins=(macos)
 fortune | cowsay -f $(ls $HOME/lemonade/install/cowsay/cows/ | gshuf -n1) | lolcat 
 
 source $ZSH/oh-my-zsh.sh
@@ -88,3 +88,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="/usr/local/opt/node@10/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+
+export SDKMAN_DIR="/Users/ollegz/.sdkman"
+[[ -s "/Users/ollegz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ollegz/.sdkman/bin/sdkman-init.sh"
