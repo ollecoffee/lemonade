@@ -29,7 +29,7 @@ apps=(
   lolcat                                        # funnier term
   pyenv                                         # used for neovim
   pyenv-virtualenv                              # used for neovim
-  neovim/neovim/neovim                          # editor
+  neovim                                        # editor
   ranger                                        # terminal - file manager
   ripgrep                                       # utils - search fast
   shellcheck                                    # shell linter

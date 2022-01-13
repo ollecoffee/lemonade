@@ -1,8 +1,5 @@
 # Installs brew cask which is used to install applications
 
-# install cask
-brew tap caskroom/cask
-
 # packages to install
 java=(
   intellij-idea                                 # IDE when you cba terminal
@@ -14,26 +11,32 @@ apps=(
   alfred                                        # utils
   alacritty                                     # superb terminal
   bartender                                     # bar upgrades
+  datweathedoe                                  # weather in bar
+  dbeaver-community                             # db
   discord                                       # communication
   firefox                                       # firefox
   google-chrome                                 # chrome
   stats                                         # menu bar coolness
   insomnia                                      # dev (better postman)
-  istat-menus                                   # bar upgradez
   iterm2                                        # standard terminal
   latest                                        # always use bleeding edge
+  libreoffice                                   # opensource office
+  miro                                          # agile
   opera                                         # browser
   overkill                                      # don't open shiiiii
   postman                                       # dev
+  robo-3t                                       # db
   signal                                        # communication
   skype                                         # communication
   sloth                                         # see trafic
   spotify                                       # utils
+  sublime                                       # text editor
   twitch                                        # utils
   tidal                                         # utils
   vlc                                           # utils
+  zsa-wally                                     # keyboard util
 )
 
 # install packages
-brew cask install "${apps[@]}"
-brew cask install "${java[@]}"
+brew install --cask "${apps[@]}"
+brew install --cask "${java[@]}"
