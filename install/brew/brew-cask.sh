@@ -3,7 +3,6 @@
 # packages to install
 java=(
   intellij-idea                                 # IDE when you cba terminal
-  java                                          # good old java
 )
 
 apps=(
@@ -11,7 +10,7 @@ apps=(
   alfred                                        # utils
   alacritty                                     # superb terminal
   bartender                                     # bar upgrades
-  datweathedoe                                  # weather in bar
+  datweatherdoe                                 # weather in bar
   dbeaver-community                             # db
   discord                                       # communication
   firefox                                       # firefox
@@ -30,11 +29,10 @@ apps=(
   skype                                         # communication
   sloth                                         # see trafic
   spotify                                       # utils
-  sublime                                       # text editor
+  sublime-text                                  # text editor
   twitch                                        # utils
   tidal                                         # utils
   vlc                                           # utils
-  zsa-wally                                     # keyboard util
 )
 
 # install packages
