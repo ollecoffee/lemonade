@@ -17,6 +17,7 @@ brew upgrade
 
 # packages to install
 apps=(
+  alt-tab                                       # super tabbing
   coreutils                                     # utils
   cowsay                                        # funnier term
   curl                                          # utils
