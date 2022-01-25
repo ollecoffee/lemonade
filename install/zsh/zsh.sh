@@ -6,7 +6,7 @@
 
 # install oh-my-zsh
 # https://github.com/robbyrussell/oh-my-zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install zsh-syntax-highlighting to oh-my-zsh custom plugins
 # https://github.com/zsh-users/zsh-syntax-highlighting.git

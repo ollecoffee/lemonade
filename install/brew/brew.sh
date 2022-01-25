@@ -9,8 +9,11 @@ sudo -v
 if test ! "$(which brew)"
 then
   echo "Installing Homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ollgyn/.profile
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # upgrade any already-installed formulae
 brew upgrade
