@@ -92,3 +92,5 @@ export SDKMAN_DIR="/Users/ollegz/.sdkman"
 
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ollgyn/.profile
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+plz

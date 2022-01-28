@@ -30,8 +30,6 @@ apps=(
   sloth                                         # see trafic
   spotify                                       # utils
   sublime-text                                  # text editor
-  twitch                                        # utils
-  tidal                                         # utils
   vlc                                           # utils
 )
 
