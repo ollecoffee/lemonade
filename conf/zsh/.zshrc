@@ -1,8 +1,6 @@
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/etc/profile.d/z.sh
 
-ZSH_THEME="random"
-
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
@@ -12,8 +10,6 @@ COMPLETION_WAITING_DOTS="true"
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="dd.mm.yyyy"
-
-eval "$(starship init zsh)"
 
 # User configuration
 
@@ -39,6 +35,7 @@ alias pls="brew"
 alias vim="nvim"
 alias plz="brew upgrade;"
 alias starwars="telnet towel.blinkenlights.nl"
+alias hist="history | fzf"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -75,3 +72,5 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ollgyn/.profile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 plz
+
+eval "$(starship init zsh)"
