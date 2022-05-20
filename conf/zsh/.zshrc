@@ -35,7 +35,6 @@ alias pls="brew"
 alias vim="nvim"
 alias plz="brew upgrade;"
 alias starwars="telnet towel.blinkenlights.nl"
-alias hist="history | fzf"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
