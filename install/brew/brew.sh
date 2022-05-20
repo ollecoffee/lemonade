@@ -36,6 +36,7 @@ apps=(
   neovim                                        # editor
   ranger                                        # terminal - file manager
   ripgrep                                       # utils - search fast
+  starship                                      # terminal magix
   shellcheck                                    # shell linter
   telnet                                        # communication tool to see ports opened
   tmux                                          # yet to learn

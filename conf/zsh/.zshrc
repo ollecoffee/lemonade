@@ -1,5 +1,3 @@
-# Point to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/etc/profile.d/z.sh
 
@@ -24,7 +22,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(macos)
 
-source $ZSH/oh-my-zsh.sh
+eval "$(starship init zsh)"
 
 # User configuration
 
