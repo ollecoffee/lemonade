@@ -73,3 +73,5 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 plz
 
 eval "$(starship init zsh)"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
