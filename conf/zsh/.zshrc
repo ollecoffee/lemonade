@@ -1,5 +1,4 @@
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/etc/profile.d/z.sh
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -72,6 +71,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 plz
 
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"

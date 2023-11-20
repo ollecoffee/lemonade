@@ -20,12 +20,11 @@ brew upgrade
 
 # packages to install
 apps=(
-  alt-tab                                       # super tabbing
   coreutils                                     # utils
   cowsay                                        # funnier term
   curl                                          # utils
   diff-so-fancy                                 # git diff
-  fasd                                          # utils - navigate directories fast, like autojump, z
+  zoxide                                          # utils - navigate directories fast, like autojump, z
   fortune                                       # funnier term
   fzf                                           # utils - terminal fuzzy finder
   git                                           # utils
