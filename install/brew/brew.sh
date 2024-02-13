@@ -21,7 +21,6 @@ brew upgrade
 # packages to install
 apps=(
   coreutils                                     # utils
-  cowsay                                        # funnier term
   curl                                          # utils
   diff-so-fancy                                 # git diff
   zoxide                                          # utils - navigate directories fast, like autojump, z

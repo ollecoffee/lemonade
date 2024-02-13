@@ -75,3 +75,6 @@ eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# bun completions
+[ -s "/Users/ollgyn/.bun/_bun" ] && source "/Users/ollgyn/.bun/_bun"
