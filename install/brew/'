@@ -41,7 +41,6 @@ apps=(
   thefuck 				                            	# spell correction
   wget                                          # utils
   zsh                                           # shell
-  wezterm                                       # blazing terminal
 )
 
 fun=(
