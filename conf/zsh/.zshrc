@@ -76,8 +76,6 @@ export SDKMAN_DIR="/Users/ollegz/.sdkman"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ollgyn/.profile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-plz
-
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 export PATH="$HOME/.jenv/bin:$PATH"
@@ -105,3 +103,5 @@ bindkey '^[[B' history-search-forward
 
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always"
+
+plz
