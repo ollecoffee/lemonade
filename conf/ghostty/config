@@ -1,0 +1,30 @@
+# Background like coffee should be black. https://youtu.be/JANcVXHqNTI?si=11DAhBDLHeN6uFfw
+background = 000000
+
+# Let your nerd fly free
+font-family = "FiraCode Nerd Font Mono"
+
+# Cause i'm blind
+font-size = 16
+
+# Increase scrollback. oh no it's in bytes...Let's try 1024 * 1024 * 10 (10 megabytes)
+
+scrollback-limit = 10485760
+
+# the default cursor prompt blinking drives me nuts
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-color = green
+cursor-style-blink = false
+cursor-opacity = 0.6
+
+# Make sure we have readline emacs keybindings for forward and backward by word.
+#keybind = alt+f=esc:f
+#keybind = alt+b=esc:b
+
+# note this is probably the correct way to specify this as it's osx specific
+macos-option-as-alt=left
+
+# theatre mode
+window-width = 80
+window-height = 25

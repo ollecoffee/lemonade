@@ -1,6 +1,6 @@
 [user]
-	name = Olle Gynther Zillén
-	email = olle.gyntherzillen@avanza.se
+	name = Olle Korkmaz Zillén
+	email = olle.korkmazzillen@avanza.se
 [core]
   autocrlf = input
 [color]
@@ -20,4 +20,4 @@
 [pull]
 	rebase = true
 [http]
-	sslBackend = schannel
+	sslBackend = openssl
