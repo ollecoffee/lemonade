@@ -70,10 +70,10 @@ export PATH="/usr/local/opt/node/bin:$PATH"
 export PATH="/usr/local/opt/npm/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
-export SDKMAN_DIR="/Users/ollegz/.sdkman"
-[[ -s "/Users/ollegz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ollegz/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ollgyn/.profile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.profile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 eval "$(zoxide init zsh)"
@@ -82,7 +82,7 @@ export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
 # bun completions
-[ -s "/Users/ollgyn/.bun/_bun" ] && source "/Users/ollgyn/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -105,3 +105,7 @@ bindkey '^[[B' history-search-forward
 alias ls="eza --icons=always"
 
 plz
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

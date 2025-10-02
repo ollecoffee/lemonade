@@ -3,7 +3,7 @@
 # install Homebrew and some of the common dependencies needed/desired for software development
 
 # ask for the administrator password upfront
-sudo -v
+# sudo -v
 
 # check for Homebrew and install it if missing
 if test ! "$(which brew)"
