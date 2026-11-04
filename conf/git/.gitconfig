@@ -1,7 +1,7 @@
 [user]
 	name = Olle Korkmaz Zillén
 	email = olle.korkmaz-zillen@airahome.com
-	signingkey = /Users/olle.korkmaz-zillen/.ssh/id_ed25519.pub
+	signingkey = ~/.ssh/id_ed25519.pub
 [core]
   autocrlf = input
 	pager = diff-so-fancy | less --tabs=4 -RFX
@@ -15,12 +15,6 @@
   remote = yellow
 [pull]
 	rebase = true
-[credential "https://github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential]
 	helper = osxkeychain
 [init]
@@ -48,4 +42,25 @@
 [tag]
 	gpgsign = true
 [gpg "ssh"]
-	allowedSignersFile = /Users/olle.korkmaz-zillen/.config/git/allowed_signers
+	allowedSignersFile = ~/.config/git/allowed_signers
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[alias]
+	st = status -sb
+	co = checkout
+	sw = switch
+	br = branch -vv
+	cm = commit -m
+	amend = commit --amend --no-edit
+	undo = reset --soft HEAD~1
+	unstage = restore --staged
+	lg = log --graph --pretty=format:'%C(yellow)%h%C(reset) %C(green)%G?%C(reset) %s %C(blue)(%cr) %C(dim)<%an>%C(reset)%C(auto)%d'
+	last = log -1 --show-signature
+	pushf = push --force-with-lease
+	sync = !git fetch && git rebase origin/$(git symbolic-ref --short refs/remotes/origin/HEAD | sed \"s@origin/@@\")
+	gone = !git fetch -p && git branch -vv | awk \"/: gone]/{print \\$1}\" | xargs -r git branch -D
+	aliases = config --get-regexp ^alias\\.
