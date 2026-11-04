@@ -3,6 +3,7 @@
 	email = olle.korkmaz-zillen@airahome.com
 [core]
   autocrlf = input
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
   ui = auto
 [color "status"]
@@ -11,13 +12,39 @@
   untracked = red
 [color "branch"]
   remote = yellow
-[credential]
-  helper = store --file ~/.git-credentials
-  helper = cache --timeout 86400
-[pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RFX
-	show = diff-so-fancy | less --tabs=1,5 -RFX
 [pull]
 	rebase = true
-[http]
-	sslBackend = openssl
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential]
+	helper = osxkeychain
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
+[rebase]
+	autoStash = true
+	updateRefs = true
+[rerere]
+	enabled = true
+[merge]
+	conflictStyle = zdiff3
+[diff]
+	algorithm = histogram
+[branch]
+	sort = -committerdate
+[commit]
+	verbose = true
+	gpgsign = true
+[gpg]
+	format = ssh
+[tag]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = /Users/olle.korkmaz-zillen/.config/git/allowed_signers
