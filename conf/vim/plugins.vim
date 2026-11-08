@@ -21,7 +21,6 @@ Plug 'junegunn/fzf.vim'
 
 " autocomplete
 Plug 'ervandew/supertab'
-Plug 'Shougo/deoplete.nvim',                   { 'do': ':UpdateRemotePlugins' }
 
 " git
 Plug 'tpope/vim-fugitive'
