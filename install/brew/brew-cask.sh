@@ -1,9 +1,11 @@
+#!/bin/bash
+
 # Installs brew cask which is used to install applications
 
 apps=(
   discord                                       # communication
   firefox                                       # firefox
-  gcloud-cli                                    # dev (google cloud cli)
+  gcloud-cli                                    # via brew, so brew upgrade keeps it current
   google-chrome                                 # chrome
   ghostty                                       # default terminal
   insomnia                                      # dev (better postman)

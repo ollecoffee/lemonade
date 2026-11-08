@@ -1,10 +1,4 @@
 #!/bin/bash
 
-# set default shell to zsh
-chsh -s "$(which zsh)"
-
-# symlink
+# No chsh: zsh is already the macOS default shell
 ln -fs "$HOME/lemonade/conf/zsh/.zshrc" "$HOME/"
-
-# restart for changes to take effect
-exec zsh

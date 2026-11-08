@@ -12,7 +12,6 @@ then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ollgyn/.profile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # upgrade any already-installed formulae
@@ -23,14 +22,11 @@ apps=(
   coreutils                                     # utils
   curl                                          # utils
   diff-so-fancy                                 # git diff
-  zoxide                                          # utils - navigate directories fast, like autojump, z
+  zoxide                                        # utils - navigate directories fast, like autojump, z
   fortune                                       # funnier term
   fzf                                           # utils - terminal fuzzy finder
   git                                           # utils
-  git-flow                                      # git branching
   lolcat                                        # funnier term
-  pyenv                                         # used for neovim
-  pyenv-virtualenv                              # used for neovim
   neovim                                        # editor
   ranger                                        # terminal - file manager
   ripgrep                                       # utils - search fast
@@ -38,10 +34,14 @@ apps=(
   shellcheck                                    # shell linter
   telnet                                        # communication tool to see ports opened
   tmux                                          # yet to learn
-  thefuck 				                            	# spell correction
+  thefuck                                       # spell correction
   wget                                          # utils
   zsh                                           # shell
-  wezterm                                       # blazing terminal
+  direnv                                        # .zshrc loads it, so a fresh shell errors without it
+  eza                                           # .zshrc loads it, so a fresh shell errors without it
+  nvm                                           # .zshrc loads it, so a fresh shell errors without it
+  postgresql@15                                 # .zshrc loads it, so a fresh shell errors without it
+  zsh-syntax-highlighting                       # .zshrc loads it, so a fresh shell errors without it
 )
 
 fun=(
@@ -60,7 +60,6 @@ utils=(
   ffmpeg                                        # utils - make videos
   gifsicle                                      # utils - make gifs
   htop                                          # utils - monitor processes
-  neofetch                                      # utils - print system information
 )
 
 # make sure we’re using the latest Homebrew
