@@ -22,8 +22,8 @@ cursor-opacity = 0.6
 #keybind = alt+f=esc:f
 #keybind = alt+b=esc:b
 
-# note this is probably the correct way to specify this as it's osx specific
-macos-option-as-alt=left
+# Right, so left Option still types ~ [ ] { } | \ on the Swedish layout
+macos-option-as-alt = right
 
 # theatre mode
 window-width = 80

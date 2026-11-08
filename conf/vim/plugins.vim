@@ -15,7 +15,8 @@ call plug#begin()
 " filez
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Homebrew's fzf, so PlugUpdate can't reclone ~/.fzf and rewrite .zshrc via ./install --all
+Plug '/opt/homebrew/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 " autocomplete
