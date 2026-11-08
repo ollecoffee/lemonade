@@ -3,6 +3,7 @@
 apps=(
   discord                                       # communication
   firefox                                       # firefox
+  gcloud-cli                                    # dev (google cloud cli)
   google-chrome                                 # chrome
   ghostty                                       # default terminal
   insomnia                                      # dev (better postman)

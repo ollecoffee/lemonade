@@ -1,128 +1,63 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
+# First, so Homebrew's tools win over the older ones macOS ships
+eval "$(/opt/homebrew/bin/brew shellenv)"
+# postgresql@15 is keg-only, so brew doesn't link psql for us
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+# Appended, so Flutter's bundled tools never shadow Homebrew's
+export PATH="$PATH:/opt/homebrew/share/flutter/bin:$HOME/.pub-cache/bin"
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Homebrew's copy, so brew upgrade keeps gcloud current
+source "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
+source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
 
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="dd.mm.yyyy"
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# So git commit and friends open nvim instead of the system vi
+export EDITOR="nvim"
 
 alias pls="brew"
+alias plz="brew upgrade"
 alias vim="nvim"
-alias plz="brew upgrade;"
+alias ls="eza --icons=always"
 alias starwars="telnet towel.blinkenlights.nl"
 alias sso="source $HOME/code/as-script/iam/sso.sh"
 alias uuid="uuidgen | tr '[:upper:]' '[:lower:]'"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# Upgrade once a day rather than per tab, so new tabs open fast
+source "${${(%):-%x}:A:h}/plz.zsh"
 
-export PATH="$PATH:/opt/homebrew/share/flutter/bin"
-export PATH="$PATH":"$HOME/.pub-cache/bin"
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+HISTFILE=$HOME/.zhistory
+SAVEHIST=50000
+HISTSIZE=50000
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space   # Lets a leading space keep secrets out of history
+setopt hist_verify
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Quicker than Ctrl-R when you remember how a command starts
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
 
-# fzf {{{
-# colors
+source <(fzf --zsh)
 export FZF_DEFAULT_OPTS='
   --color fg:7,bg:0,hl:1,fg+:0,bg+:4,hl+:1,info:5
   --color prompt:6,spinner:2,pointer:1,marker:3,header:2
 '
-# make fzf use ripgrep
-# --files: List files that would be searched but do not search
-# --no-ignore: Do not respect .gitignore, etc...
-# --hidden: Search hidden files and folders
-# --follow: Follow symlinks
-# --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+# rg is faster than find, and dotfiles/gitignored files are often what you want to open
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-export PATH="/usr/local/opt/node/bin:$PATH"
-export PATH="/usr/local/opt/npm/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.profile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-eval "$(zoxide init zsh)"
-export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-
-# bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
-# source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# history setup
-HISTFILE=$HOME/.zhistory
-SAVEHIST=1000
-HISTSIZE=999
-setopt share_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_verify
-
-# completion using arrow keys (based on history)
-bindkey '^[[A' history-search-backward
-bindkey '^[[B' history-search-forward
-
-# ---- Eza (better ls) -----
-alias ls="eza --icons=always"
-
-plz
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/olle.korkmaz-zillen/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/olle.korkmaz-zillen/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/olle.korkmaz-zillen/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/olle.korkmaz-zillen/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
+eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
-export PATH="$HOME/.local/bin:$PATH"
 
-# Starship prompt (keep last so nothing overrides it)
 eval "$(starship init zsh)"
+
+# Last, or widgets defined after it won't be highlighted
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
