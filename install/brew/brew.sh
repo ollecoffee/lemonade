@@ -42,10 +42,35 @@ apps=(
   nvm                                           # .zshrc loads it, so a fresh shell errors without it
   postgresql@15                                 # .zshrc loads it, so a fresh shell errors without it
   zsh-syntax-highlighting                       # .zshrc loads it, so a fresh shell errors without it
+  mas                                           # install/mas needs it to install App Store apps
+  gh
+  jq
+)
+
+dev=(
+  cocoapods
+  deno
+  fvm
+  node@24                                       # pinned to the LTS line, not whatever node is latest
+  poetry
+  postgresql@18
+  rust
+  xcodegen
+  yarn
+)
+
+infra=(
+  grpcurl
+  hashicorp/tap/terraform                       # HashiCorp's tap, since core froze terraform at 1.5.7 after the license change
+  helm
+  k9s
+  kubectx
+  kubernetes-cli
+  kubie
+  protoc-gen-grpc-java
 )
 
 fun=(
-  ant                                           # buildtool
   ansible                                       # automation
   docker                                        # container
   gradle                                        # buildtool
@@ -67,6 +92,8 @@ brew update
 
 # install packages
 brew install "${apps[@]}"
+brew install "${dev[@]}"
+brew install "${infra[@]}"
 brew install "${fun[@]}"
 brew install "${utils[@]}"
 
