@@ -13,6 +13,7 @@ steps=(
   install/brew/brew.sh        # first, everything below needs Homebrew
   install/brew/brew-cask.sh
   install/mas/mas.sh
+  install/claude/claude.sh
   install/zsh/zsh.sh
   install/git/git.sh
   install/tmux/tmux.sh
