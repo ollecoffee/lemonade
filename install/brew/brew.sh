@@ -40,7 +40,6 @@ apps=(
   direnv                                        # .zshrc loads it, so a fresh shell errors without it
   eza                                           # .zshrc loads it, so a fresh shell errors without it
   nvm                                           # .zshrc loads it, so a fresh shell errors without it
-  postgresql@15                                 # .zshrc loads it, so a fresh shell errors without it
   zsh-syntax-highlighting                       # .zshrc loads it, so a fresh shell errors without it
   mas                                           # install/mas needs it to install App Store apps
   gh
@@ -53,7 +52,7 @@ dev=(
   fvm
   node@24                                       # pinned to the LTS line, not whatever node is latest
   poetry
-  postgresql@18
+  postgresql@18                                 # .zshrc puts its bin on PATH, so a fresh shell has psql
   rust
   xcodegen
   yarn

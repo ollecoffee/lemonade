@@ -1,7 +1,7 @@
 # First, so Homebrew's tools win over the older ones macOS ships
 eval "$(/opt/homebrew/bin/brew shellenv)"
-# postgresql@15 is keg-only, so brew doesn't link psql for us
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+# postgresql@18 is keg-only, so a fresh brew install doesn't link psql for us
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
 export PATH="$HOME/.jenv/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
